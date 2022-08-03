@@ -1,5 +1,12 @@
 # Express: CRUD de usuário + permissão de administrador
 
+Desenvolvido por: <a href="https://www.linkedin.com/in/devmatheuus/" target="_blank">Matheus Lima</a> 
+
+## Pré Requisitos
+
+  * Node.js v16.15.0
+  * Yarn v1.22.18
+
 Para inciar este projeto, é necessário instalar as dependências, que serão utilizadas nos testes. Portanto utilize o comando abaixo para instalar tais dependências:
 
 ````
@@ -32,6 +39,14 @@ Além disso, é importante não alterar o arquivo `.babelrc`. (não se preocupe 
 
 E também não altere o script de `test` localizado no `package.json`. Isso será utilizado para rodar os testes.
 
+# **Endpoints do serviço:**
+
+ - POST	/users	- Criação de usuários
+ - POST	/login	- Gera um token JWT recebendo email e password no corpo da requisição como JSON.
+ - GET	/users	- Lista todos os usuários
+ - GET	/users/profile	- Retorna os dados do usuário logado (usuário a qual pertence o token que será necessário neste endpoint)
+ - PATCH	/users/<uuid>	 - Atualiza os dados de um usuário
+ - DELETE	/users/<uuid>	- Deleta usuários do banco
 
 # **Rodando os testes** 
 
@@ -132,5 +147,4 @@ E logo abaixo da lista de testes executados irá aparecer uma ou mais mensagens,
     Received: 200
 
 `````
-#
-### Agora que já sabe como iniciar o seu projeto, rodar os testes e lê-los, é hora de colocar a mão no código!
+
